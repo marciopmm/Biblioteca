@@ -1,0 +1,34 @@
+c:\users\dsistemas\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\Biblioteca.exe.config
+c:\users\dsistemas\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\Database1.mdf
+c:\users\dsistemas\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\Database1_log.ldf
+c:\users\dsistemas\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\Biblioteca.exe
+c:\users\dsistemas\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\Biblioteca.pdb
+c:\users\dsistemas\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.csprojResolveAssemblyReference.cache
+c:\users\dsistemas\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Form1.resources
+c:\users\dsistemas\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Properties.Resources.resources
+c:\users\dsistemas\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.csproj.GenerateResource.Cache
+c:\users\dsistemas\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.exe
+c:\users\dsistemas\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.pdb
+c:\users\dsistemas\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\Biblioteca.exe.manifest
+c:\users\dsistemas\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\Biblioteca.application
+c:\users\dsistemas\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.exe.manifest
+c:\users\dsistemas\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.application
+C:\Users\dsistemas\Documents\Visual Studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Usuario.resources
+C:\Projetos\Exemplos\Biblioteca\Biblioteca\bin\Debug\Biblioteca.exe.config
+C:\Projetos\Exemplos\Biblioteca\Biblioteca\obj\Debug\Biblioteca.exe
+C:\Projetos\Exemplos\Biblioteca\Biblioteca\obj\Debug\Biblioteca.pdb
+C:\Projetos\Exemplos\Biblioteca\Biblioteca\bin\Debug\Database1.mdf
+C:\Projetos\Exemplos\Biblioteca\Biblioteca\bin\Debug\Database1_log.ldf
+C:\Projetos\Exemplos\Biblioteca\Biblioteca\bin\Debug\Biblioteca.exe.manifest
+C:\Projetos\Exemplos\Biblioteca\Biblioteca\bin\Debug\Biblioteca.application
+C:\Projetos\Exemplos\Biblioteca\Biblioteca\bin\Debug\Biblioteca.exe
+C:\Projetos\Exemplos\Biblioteca\Biblioteca\bin\Debug\Biblioteca.pdb
+C:\Projetos\Exemplos\Biblioteca\Biblioteca\obj\Debug\Biblioteca.csprojResolveAssemblyReference.cache
+C:\Projetos\Exemplos\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Main.resources
+C:\Projetos\Exemplos\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Principal.resources
+C:\Projetos\Exemplos\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Login.resources
+C:\Projetos\Exemplos\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Properties.Resources.resources
+C:\Projetos\Exemplos\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Usuario.resources
+C:\Projetos\Exemplos\Biblioteca\Biblioteca\obj\Debug\Biblioteca.csproj.GenerateResource.Cache
+C:\Projetos\Exemplos\Biblioteca\Biblioteca\obj\Debug\Biblioteca.exe.manifest
+C:\Projetos\Exemplos\Biblioteca\Biblioteca\obj\Debug\Biblioteca.application
