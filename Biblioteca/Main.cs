@@ -107,7 +107,17 @@ namespace Biblioteca
         private void Main_Load(object sender, EventArgs e)
         {
             Login formLogin = new Login();
-            formLogin.ShowDialog();
+            DialogResult resultado = formLogin.ShowDialog();
+            if (resultado == DialogResult.OK)
+            {
+                Principal frmPrincipal = new Principal();
+                frmPrincipal.MdiParent = this;
+                frmPrincipal.Show();
+            }
+            else
+            {
+                this.Close();
+            }
         }
     }
 }

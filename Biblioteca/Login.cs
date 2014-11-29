@@ -34,7 +34,8 @@ namespace Biblioteca
 
         private void btncancelar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
 
         private void btnOK_Click(object sender, EventArgs e)
@@ -51,8 +52,31 @@ namespace Biblioteca
                 return;
             }
 
-            Principal frmLivro = new Principal();
-            frmLivro.Show();
+            bool loginOK = VerificarLogin(txtLogin.Text, txtSenha.Text);
+
+            if (loginOK)
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else
+            {
+                txtLogin.Clear();
+                txtSenha.Clear();
+                MessageBox.Show("Login e/ou senha inválidos.", "Presta atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private bool VerificarLogin(string login, string senha)
+        {
+            /* Aqui você deve ir na tabela de Usuarios e
+             * verificar se existe um usuário com este login
+             * e senha. Caso exista, este método retorna 'true'.
+             * Caso não exista, retorna 'false'.
+             */
+
+            // Isto é apenas temporário. Favor executar como descrito acima.
+            return login == "aula" && senha == "aula";
         }
     }
 }

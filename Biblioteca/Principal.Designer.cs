@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             System.Windows.Forms.Label emprestadoLabel;
             System.Windows.Forms.Label editoraLabel;
             System.Windows.Forms.Label autorLabel;
             System.Windows.Forms.Label nomeLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.livroBindingSource1BindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.livroBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.database1DataSet1 = new Biblioteca.Database1DataSet();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -47,11 +49,8 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.livroBindingSource1BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.livroBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.database1DataSet1 = new Biblioteca.Database1DataSet();
             this.livroTableAdapter1 = new Biblioteca.Database1DataSetTableAdapters.LivroTableAdapter();
             this.tableAdapterManager1 = new Biblioteca.Database1DataSetTableAdapters.TableAdapterManager();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.emprestadoCheckBox1 = new System.Windows.Forms.CheckBox();
             this.editoraTextBox1 = new System.Windows.Forms.TextBox();
             this.autorTextBox1 = new System.Windows.Forms.TextBox();
@@ -64,8 +63,51 @@
             this.livroBindingSource1BindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.livroBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // emprestadoLabel
+            // 
+            emprestadoLabel.AutoSize = true;
+            emprestadoLabel.BackColor = System.Drawing.Color.Transparent;
+            emprestadoLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            emprestadoLabel.Location = new System.Drawing.Point(28, 155);
+            emprestadoLabel.Name = "emprestadoLabel";
+            emprestadoLabel.Size = new System.Drawing.Size(78, 15);
+            emprestadoLabel.TabIndex = 32;
+            emprestadoLabel.Text = "Emprestado:";
+            // 
+            // editoraLabel
+            // 
+            editoraLabel.AutoSize = true;
+            editoraLabel.BackColor = System.Drawing.Color.Transparent;
+            editoraLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            editoraLabel.Location = new System.Drawing.Point(57, 119);
+            editoraLabel.Name = "editoraLabel";
+            editoraLabel.Size = new System.Drawing.Size(49, 15);
+            editoraLabel.TabIndex = 30;
+            editoraLabel.Text = "Editora:";
+            // 
+            // autorLabel
+            // 
+            autorLabel.AutoSize = true;
+            autorLabel.BackColor = System.Drawing.Color.Transparent;
+            autorLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            autorLabel.Location = new System.Drawing.Point(68, 93);
+            autorLabel.Name = "autorLabel";
+            autorLabel.Size = new System.Drawing.Size(38, 15);
+            autorLabel.TabIndex = 28;
+            autorLabel.Text = "Autor:";
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.AutoSize = true;
+            nomeLabel.BackColor = System.Drawing.Color.Transparent;
+            nomeLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nomeLabel.Location = new System.Drawing.Point(62, 67);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(44, 15);
+            nomeLabel.TabIndex = 26;
+            nomeLabel.Text = "Nome:";
             // 
             // livroBindingSource1BindingNavigator
             // 
@@ -93,7 +135,7 @@
             this.livroBindingSource1BindingNavigator.MovePreviousItem = this.toolStripButton2;
             this.livroBindingSource1BindingNavigator.Name = "livroBindingSource1BindingNavigator";
             this.livroBindingSource1BindingNavigator.PositionItem = this.toolStripTextBox1;
-            this.livroBindingSource1BindingNavigator.Size = new System.Drawing.Size(385, 25);
+            this.livroBindingSource1BindingNavigator.Size = new System.Drawing.Size(371, 25);
             this.livroBindingSource1BindingNavigator.TabIndex = 1;
             this.livroBindingSource1BindingNavigator.Text = "bindingNavigator1";
             // 
@@ -106,6 +148,16 @@
             this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton5.Text = "Add new";
             this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            // 
+            // livroBindingSource1
+            // 
+            this.livroBindingSource1.DataMember = "Livro";
+            this.livroBindingSource1.DataSource = this.database1DataSet1;
+            // 
+            // database1DataSet1
+            // 
+            this.database1DataSet1.DataSetName = "Database1DataSet";
+            this.database1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // toolStripLabel1
             // 
@@ -192,16 +244,6 @@
             this.livroBindingSource1BindingNavigatorSaveItem.Text = "Save Data";
             this.livroBindingSource1BindingNavigatorSaveItem.Click += new System.EventHandler(this.livroBindingSource1BindingNavigatorSaveItem_Click);
             // 
-            // livroBindingSource1
-            // 
-            this.livroBindingSource1.DataMember = "Livro";
-            this.livroBindingSource1.DataSource = this.database1DataSet1;
-            // 
-            // database1DataSet1
-            // 
-            this.database1DataSet1.DataSetName = "Database1DataSet";
-            this.database1DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // livroTableAdapter1
             // 
             this.livroTableAdapter1.ClearBeforeFill = true;
@@ -212,105 +254,50 @@
             this.tableAdapterManager1.LivroTableAdapter = this.livroTableAdapter1;
             this.tableAdapterManager1.UpdateOrder = Biblioteca.Database1DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 28);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(385, 335);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // emprestadoLabel
-            // 
-            emprestadoLabel.AutoSize = true;
-            emprestadoLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            emprestadoLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            emprestadoLabel.Location = new System.Drawing.Point(32, 305);
-            emprestadoLabel.Name = "emprestadoLabel";
-            emprestadoLabel.Size = new System.Drawing.Size(79, 15);
-            emprestadoLabel.TabIndex = 32;
-            emprestadoLabel.Text = "Emprestado:";
-            // 
             // emprestadoCheckBox1
             // 
             this.emprestadoCheckBox1.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.livroBindingSource1, "Emprestado", true));
-            this.emprestadoCheckBox1.Location = new System.Drawing.Point(12, 307);
+            this.emprestadoCheckBox1.Location = new System.Drawing.Point(112, 157);
             this.emprestadoCheckBox1.Name = "emprestadoCheckBox1";
             this.emprestadoCheckBox1.Size = new System.Drawing.Size(14, 13);
             this.emprestadoCheckBox1.TabIndex = 33;
             this.emprestadoCheckBox1.UseVisualStyleBackColor = true;
             // 
-            // editoraLabel
-            // 
-            editoraLabel.AutoSize = true;
-            editoraLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            editoraLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            editoraLabel.Location = new System.Drawing.Point(12, 274);
-            editoraLabel.Name = "editoraLabel";
-            editoraLabel.Size = new System.Drawing.Size(50, 15);
-            editoraLabel.TabIndex = 30;
-            editoraLabel.Text = "Editora:";
-            // 
             // editoraTextBox1
             // 
-            this.editoraTextBox1.BackColor = System.Drawing.SystemColors.MenuText;
+            this.editoraTextBox1.BackColor = System.Drawing.Color.White;
             this.editoraTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.livroBindingSource1, "Editora", true));
-            this.editoraTextBox1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.editoraTextBox1.Location = new System.Drawing.Point(68, 272);
+            this.editoraTextBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.editoraTextBox1.Location = new System.Drawing.Point(112, 117);
             this.editoraTextBox1.Name = "editoraTextBox1";
             this.editoraTextBox1.Size = new System.Drawing.Size(181, 20);
             this.editoraTextBox1.TabIndex = 31;
             this.editoraTextBox1.TextChanged += new System.EventHandler(this.editoraTextBox1_TextChanged);
             // 
-            // autorLabel
-            // 
-            autorLabel.AutoSize = true;
-            autorLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            autorLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            autorLabel.Location = new System.Drawing.Point(15, 241);
-            autorLabel.Name = "autorLabel";
-            autorLabel.Size = new System.Drawing.Size(41, 15);
-            autorLabel.TabIndex = 28;
-            autorLabel.Text = "Autor:";
-            // 
             // autorTextBox1
             // 
-            this.autorTextBox1.BackColor = System.Drawing.SystemColors.MenuText;
+            this.autorTextBox1.BackColor = System.Drawing.Color.White;
             this.autorTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.livroBindingSource1, "Autor", true));
-            this.autorTextBox1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.autorTextBox1.Location = new System.Drawing.Point(68, 239);
+            this.autorTextBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.autorTextBox1.Location = new System.Drawing.Point(112, 91);
             this.autorTextBox1.Name = "autorTextBox1";
             this.autorTextBox1.Size = new System.Drawing.Size(181, 20);
             this.autorTextBox1.TabIndex = 29;
             // 
-            // nomeLabel
-            // 
-            nomeLabel.AutoSize = true;
-            nomeLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            nomeLabel.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nomeLabel.Location = new System.Drawing.Point(12, 215);
-            nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(43, 15);
-            nomeLabel.TabIndex = 26;
-            nomeLabel.Text = "Nome:";
-            // 
             // nomeTextBox1
             // 
-            this.nomeTextBox1.BackColor = System.Drawing.SystemColors.MenuText;
+            this.nomeTextBox1.BackColor = System.Drawing.Color.White;
             this.nomeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.livroBindingSource1, "Nome", true));
-            this.nomeTextBox1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.nomeTextBox1.Location = new System.Drawing.Point(68, 213);
+            this.nomeTextBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.nomeTextBox1.Location = new System.Drawing.Point(112, 65);
             this.nomeTextBox1.Name = "nomeTextBox1";
             this.nomeTextBox1.Size = new System.Drawing.Size(135, 20);
             this.nomeTextBox1.TabIndex = 27;
             // 
-            // Form1
+            // Principal
             // 
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(385, 353);
+            this.ClientSize = new System.Drawing.Size(371, 206);
             this.Controls.Add(emprestadoLabel);
             this.Controls.Add(this.emprestadoCheckBox1);
             this.Controls.Add(editoraLabel);
@@ -319,11 +306,10 @@
             this.Controls.Add(this.autorTextBox1);
             this.Controls.Add(nomeLabel);
             this.Controls.Add(this.nomeTextBox1);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.livroBindingSource1BindingNavigator);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Name = "Form1";
-            this.Text = "Biblioteca";
+            this.Name = "Principal";
+            this.Text = "Controle de Livros";
             this.TransparencyKey = System.Drawing.Color.Black;
             this.Load += new System.EventHandler(this.Form1_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.livroBindingSource1BindingNavigator)).EndInit();
@@ -331,7 +317,6 @@
             this.livroBindingSource1BindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.livroBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.database1DataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,7 +364,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripButton livroBindingSource1BindingNavigatorSaveItem;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.CheckBox emprestadoCheckBox1;
         private System.Windows.Forms.TextBox editoraTextBox1;
         private System.Windows.Forms.TextBox autorTextBox1;
